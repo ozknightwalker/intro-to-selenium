@@ -3,20 +3,20 @@
 ## Installation
 
 ### linux
-    1. Installing python pip (this requires superuser access)
-      ```
-      sudo apt install python-pip
-      ```
-    2. Installing selenium
-      * manually
-        open the terminal then
-        ```
-        pip install selenium
-        ```
-      * using requirements.txt
-      ```
-      pip install -r requirements.txt
-      ```
+1. Installing python pip (this requires superuser access)
+    ```
+    sudo apt install python-pip
+    ```
+2. Installing selenium
+    * open the terminal then install selenium in pip
+    ```
+    pip install selenium
+    ```
+    * using requirements.txt
+    ```
+    pip install -r requirements.txt
+    ```
+
 ### windows (under construction)
 
 ### How to run the program
