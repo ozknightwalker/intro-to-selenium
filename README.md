@@ -1,6 +1,6 @@
-#Intro to Selenium Testing
+# Intro to Selenium Testing
 
-##Installation
+## Installation
 
 ### linux
     1. Installing python pip (this requires superuser access)
@@ -24,7 +24,7 @@ our base file is the base.py file. you can just do
 ```
 python base.py
 ```
-to run/execute our codes 
+to run/execute our codes
 
 #### Drivers (browser engines)
 to add/user custom browser engines you need to make it accessible and executable by making sure its in the PATH directory, or you can modify you PATH
