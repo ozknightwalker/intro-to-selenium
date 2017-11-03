@@ -1,5 +1,12 @@
 # Intro to Selenium Testing
 
+### Scope
+* Basics
+* Navigation
+* Element selection
+* Form inputs
+* Waits and others (extra)
+
 ## Installation
 
 1. ### linux
