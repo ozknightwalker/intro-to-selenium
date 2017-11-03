@@ -3,43 +3,33 @@ from __future__ import unicode_literals
 import unittest
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 
 
-# or use Chrome, PhantomJS, or any webdriver you provided given that selenium
-# supports the provided driver
-driver = webdriver.Firefox()  # or Firefox('path of the driver')
+class BaseTestCase(unittest.TestCase):
 
-driver.get('https://google.com')
-# do the magic here
-field = driver.find_element_by_name('q')
-field.send_keys('search something here!')
-field.send_keys(Keys.ENTER)
+    def setUp(self):
+        self.driver = webdriver.Firefox()
 
-# get page source
-driver.page_source
+    def tearDown(self):
+        self.driver.close()
 
-# don't forget to close the browser after the execution
-driver.close()
+    def test_interact_form(self):
+        self.driver.get(
+            'https://www.w3schools.com/html/html_form_elements.asp')
+        field = self.driver.find_element_by_css_selector('#main > textarea')
+        # field = self.driver.find_element_by_xpath('//*[@id="main"]/textarea')
+        field.send_keys('search here')
+        # field.send_keys(Keys.ENTER)
 
-
-# class BaseTestCase(unittest.TestCase):
-
-#     def setUp(self):
-#         self.driver = webdriver.Firefox()
-
-#     def tearDown(self):
-#         self.driver.close()
-
-#     def test_google_search(self):
-#         self.driver.get('http://google.com')
-#         field = self.driver.find_element_by_name('q')
-#         field.send_keys('search here')
-#         field.send_keys(Keys.ENTER)
-#         import time
-#         time.sleep(1)
-#         self.assertIn('search here', self.driver.title)
+    def test_interact_options(self):
+        self.driver.get(
+            'https://channelfix.com/#ranking')
+        # iterate all options
+        select = self.driver.find_element_by_class_name('categories')
+        options = select.find_elements_by_tag_name('option')
+        for option in options:
+            print option.get_attribute('value')
 
 
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()
