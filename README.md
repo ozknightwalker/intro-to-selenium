@@ -2,24 +2,24 @@
 
 ## Installation
 
-### linux
-1. Installing python pip (this requires superuser access)
-    ```
-    sudo apt install python-pip
-    ```
-2. Installing selenium
-    * open the terminal then install selenium in pip
-    ```
-    pip install selenium
-    ```
-    * using requirements.txt
-    ```
-    pip install -r requirements.txt
-    ```
+1. ### linux
+  1. Installing python pip (this requires superuser access)
+      ```
+      sudo apt install python-pip
+      ```
+  2. Installing selenium
+      * open the terminal then install selenium in pip
+      ```
+      pip install selenium
+      ```
+      * using requirements.txt
+      ```
+      pip install -r requirements.txt
+      ```
 
-### windows (under construction)
+2. ### windows (under construction)
 
-### How to run the program
+## How to run the program
 our base file is the base.py file. you can just do
 ```
 python {file|base.py}
@@ -35,7 +35,7 @@ to add/user custom browser engines you need to make it accessible and executable
 * [Chrome](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
 
-### Resources
+#### Resources
 * [Google chrome webdriver documentation](https://sites.google.com/a/chromium.org/chromedriver/getting-started)
 * [Python selenium](http://selenium-python.readthedocs.io/)
 * [How to install PhantomJS](https://www.vultr.com/docs/how-to-install-phantomjs-on-ubuntu-16-04)
