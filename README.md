@@ -10,11 +10,16 @@
 ## Installation
 
 1. ### linux
-  1. Installing python pip (this requires superuser access)
+  1. Make sure you have updated `PATH` to be able to locate your webdrivers
+     ```
+       ~/.bashrc
+     ```
+
+  2. Installing python pip (this requires superuser access)
       ```
       sudo apt install python-pip
       ```
-  2. Installing selenium
+  3. Installing selenium
       * open the terminal then install selenium in pip
       ```
       pip install selenium
